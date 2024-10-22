@@ -10,7 +10,7 @@ import { useEffect, useState } from "react"
 export default function HomeInfiniteBlogScroll({ initialBlogs }: { initialBlogs: IBlogCardInfo[] }) {
     const query = useSearchParams().get("q")
     // the value `12` should be in sync with getBlogsByQuery functions `take` query variable.
-    const [hasMore, setHasMore] = useState(initialBlogs.length === 12)
+    const [hasMore, setHasMore] = useState(false)
     const [blogs, setBlogs] = useState(initialBlogs)
 
     const refetch = async () => {
@@ -20,6 +20,7 @@ export default function HomeInfiniteBlogScroll({ initialBlogs }: { initialBlogs:
     }
 
     useEffect(() => {
+        setHasMore(initialBlogs.length === 12)
         setBlogs(initialBlogs)
     }, [initialBlogs])
 
