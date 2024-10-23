@@ -20,6 +20,7 @@ export default function HomeInfiniteBlogScroll({ initialBlogs }: { initialBlogs:
     }
 
     useEffect(() => {
+        setHasMore(initialBlogs.length === 12)
         setBlogs(initialBlogs)
     }, [initialBlogs])
 
