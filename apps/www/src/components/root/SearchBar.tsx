@@ -27,7 +27,7 @@ export default function SearchBar() {
                 size="sm"
                 startContent={<FaSearch className="mx-1" />}
             />
-            <Button type="submit" onClick={submit} className="h-8 rounded-full" color="primary">
+            <Button type="submit" className="h-8 rounded-full" color="primary">
                 Search
             </Button>
         </form>
