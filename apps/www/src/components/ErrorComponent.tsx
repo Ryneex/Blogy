@@ -4,8 +4,7 @@ import { useRouter } from "next-nprogress-bar"
 
 export default function ErrorComponent({ error, resetErrorBoundary }: { error?: Error | string; resetErrorBoundary?: () => void }) {
     const router = useRouter()
-    if (error instanceof Error) {
-    }
+
     return (
         <div className="grid h-full w-full place-items-center">
             <div className="flex max-w-sm flex-col items-center text-center">
